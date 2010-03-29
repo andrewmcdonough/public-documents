@@ -1,0 +1,126 @@
+% Tell LaTex what kind of document you're writing, and the default font size
+% I'm in Europe, so I'm printing on A4 paper, if you're in North America
+% you should probably change a4paper to letterpaper
+\documentclass[a4paper,12pt]{article}
+
+% == START HEADER ==
+
+% The header in Latex contains formatting information, which is kept
+% separate from the normal flow of the document c.f. CSS for your HTML
+
+% You can also include functionality from external packages using
+% the \usepackage command
+
+% The hyperref package facilitates links within the document
+\usepackage{hyperref}
+
+% The geometry package gives you fine-grained control of the page layout
+% Here I use it to set the margins
+\usepackage[hmargin=2cm,vmargin=2cm]{geometry}
+
+% LaTeX is fairly generous with spacing, which is good for long documents
+% I want to try to fit my CV onto once page so I've changed the line
+% spacing to be 0.7 of the default spacing
+\linespread{0.7} 
+
+% Again to fit onto one page, I've make the paragraph spacing smaller by 2mm 
+\addtolength{\parskip}{-2mm}
+
+% Set the link color and some information about the document
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {Andrew McDonough},
+  pdftitle = {CV - Andrew McDonough},
+  pdfkeywords = {},
+  pdfsubject = {CV},
+}
+
+% Don't number pages
+\pagestyle{empty}
+
+% Don't indent paragraphs
+\setlength{\parindent}{0mm}
+
+% == END HEADER ==
+
+% == BEGIN DOCUMENT ==
+
+\begin{document}
+
+% Some metadata about the document
+\title{CV - Andrew McDonough}
+\author{Andrew McDonough}
+
+\begin{center}
+  {\huge Andrew McDonough} \\[\baselineskip]
+  1 Downham Lodge, Almorah Road, London,  N1 3HW \\
+  Mobile: 07870595470, Email: \href{mailto:andrew@andrewmcdonough.com}{andrew@andrewmcdonough.com} \\
+  Web: \url{http://www.andrewmcdonough.com}, Twitter: \href{http://twitter.com/andrewmcdonough}{@andrewmcdonough} \\
+\end{center}
+
+
+% The section command starts a new section with a header.
+% The asterisk (*) stops the default heading numbering.
+\section*{Profile}
+Senior Software Developer with eight years experience in the I.T. industry and a degree in Computer Science from The University of Cambridge.  A background in Java, PHP and Perl, currently specialising in ruby, with three years of commercial experience using Ruby on Rails to develop web applications.
+
+\section*{Key Skills}
+% itemize is used to handle lists with bullet points
+\begin{itemize}
+  % setlength tweeks the default formatting of this list
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+  % \item opens a new list element, textbf{} sets the text inside the braces to bold
+  \item \textbf{Ruby}: Rails, Sinatra
+  \item \textbf{Testing}: TDD/BDD, Cucumber, RSpec, Test::Unit
+  \item \textbf{Agile}: Scrum, XP
+  \item \textbf{Javascript}: Prototype, jQuery 
+  \item \textbf{Other Languages}: Java, PHP, Perl, TCL, C, ML, Prolog
+  \item \textbf{Databases}: MySQL, Oracle, PostgreSQL
+  \item \textbf{Version Control}: Subversion, git
+  \item \textbf{Web}: XHTML, CSS, AJAX, XML
+  \item \textbf{Linux}: Power user, both server and desktop
+  \item \textbf{Preferred Development Environment}: Ubuntu/OS X, Vi, bash
+ \end{itemize}
+
+
+\section*{Career Summary}
+\begin{itemize}
+  % \textsc{} sets the text to small caps \emph{} puts emphasis on the text (using italics)
+  \item 2004-2010	\textsc{Senior Software Developer}, \emph{sportcentric}, London
+    % You can nest itemized lists. Here I'm using this to list responsibilities of each job
+    \begin{itemize}
+      \item Developing web sites and applications for sporting organisations, primarily national and international and sporting federations
+      \item Integrating web applications into our enterprise content management system
+      \item Systems include: Content management, CRM, e-commerce, calendars, resource booking, event registrations, licencing, sporting statistics, XML feeds, email marketing
+      \item Multi-user, multi-language applications with fine grained security
+      \item Direct client contact at all stages of the development life-cycle from proposal and specification to support and training
+    \end{itemize} 
+  \item 2004 \textsc{Senior Software Developer}, \emph{Hemmarston}, London
+    \begin{itemize}
+      \item SMS marketing and voting system
+    \end{itemize}
+  \item 2003-2004	\textsc{Freelance I.T. Consultant} 
+    \begin{itemize}
+      \item \emph{Kellis Group Limited} – Built a web based database to manage the workflow for 30 recruitment consultants
+      \item \emph{Hackney Youth Partnership} – Designed and implemented an online CRM system
+    \end{itemize}
+  \item 2001-2003	\textsc{Software Developer}, \emph{e-Link Software}, Belfast
+    \begin{itemize}
+      \item Web based databases for the recruitment industry
+    \end{itemize}
+\end{itemize} 
+
+\section*{Education and Qualifications}
+\begin{itemize}
+  \item 1998-2001	University of Cambridge
+	  MA (Cantab) Computer Science 
+  \item 1991-1998	Methodist College Belfast
+  \item 1998	4 A-Levels:
+	Further Pure Mathematics (A), Physics (A) \\
+	Further Applied Mathematics (A), Chemistry (A)
+\end{itemize}
+
+\end{document}
